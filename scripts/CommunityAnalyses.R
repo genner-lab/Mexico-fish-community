@@ -50,12 +50,12 @@ pairwise.adonis(Gracida_Species93[,2:19], Gracida_Species93$Site)
 Gracida_EnvPredic93 <- read.table("Gracida_EnvPredic93.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Gracida_Native93 <- cbind(Gracida_Species93[,1:10],Gracida_Species93[,12:19])
 
-#Analysis 2: Redundancy Analysis across all sites
+#Analysis 2: Canonical Correspondence Analysis across all sites
 
 CCA_All<- cca (Gracida_Native93 [,2:18] ~ Area + Depth + Trans + Shore + pH + DO + Temp + Oreo + Subs, data = Gracida_EnvPredic93)
 summary(CCA_All)
 
-#Analysis 2: Test of the statistical signficance of environmental predictors in the Redundancy Analysis
+#Analysis 2: Test of the statistical signficance of environmental predictors in the Canonical Correspondence Analysis
 
 anova(CCA_All, by ="margin", permutations=10000)
 
