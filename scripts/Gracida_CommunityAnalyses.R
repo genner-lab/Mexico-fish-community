@@ -1,5 +1,3 @@
-setwd("/Users/bzmjg/Desktop/Live_Manuscripts/Carlos_Lakes/Community paper")
-
 #Packages required
 
 library(vegan)
@@ -79,7 +77,7 @@ PCOAscoresHell <- PCOA_SpeciesMatrixHell$vectors
 PCOAscoresHell <- as.data.frame(PCOAscoresHell)
 PCOAscoresHell <- cbind(log_Gracida_Species93[,1:2],PCOAscoresHell)
 
-#Analysis 2: Plot the PCOA, here using a star plot, save as 6 x 8
+#Analysis 2: Plot the PCOA, here using a star plot.
 
 colours = c("#999999", "#E69F00", "#56B4E9", "black", "red","#CCCC00")
 
@@ -90,8 +88,6 @@ PlotHell <- ggscatter(PCOAscoresHell, x = "Axis.1", y = "Axis.2", color = "Lake"
   labs(x ="PCOA1 (27.4% of variation)", y = "PCOA2 (14.7% of variation)") +
   theme(legend.position = "right")
 PlotHell
-
-#save as 5x7
 
 #Analysis 3: Permanova (permutation Anova)
 
@@ -152,8 +148,6 @@ IndValPlot = ggplot(IndVal_Index_Long, aes(x = factor(Habitat, level = level_ord
   labs( x= "", y = "", size = "Indicator Value", fill = "") +
   theme_classic() + theme(legend.position='right') + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 IndValPlot 
-
-#save as 6.5 x 4.5
 
 #Analysis 5: Redundancy analysis
 
@@ -220,8 +214,6 @@ Combined_Figure_VII <- ggarrange(RDA_SitePlot,RDA_EnvPlot, common.legend = TRUE,
                 ncol = 1, nrow = 2, legend="right")
 Combined_Figure_VII 
 
-#save 9 x 6.5
-
 #Analysis 6: Diversity vs. environmental variables
 
 Diversity <- read.table("Diversity.txt",header=TRUE, fill=TRUE,sep="\t",check.names=FALSE)
@@ -249,7 +241,7 @@ SpeciesxDepth <- ggplot(Diversity, aes(x = log10(Depth), y = SpeciesRichness)) +
   labs(y ="Species richness", x =  bquote('Depth (m, '*log[10]*'transformed)'),)
 SpeciesxDepth
 
-#Analysis 6:Combined Figure, save as 6 x 8
+#Analysis 6:Combined Figure
 
 Combined_Figure_IV <- ggarrange(SpeciesxDO,SpeciesxDepth, common.legend = TRUE, 
                              labels = c("A", "B"),
@@ -277,7 +269,7 @@ NonCichlids_plot <- ggplot(data=NonCichlids_long, aes(x=Lake, y=value, fill = Ta
   xlab("Species") + ylab("Mean number of individuals per sample") + guides(fill = guide_legend(reverse = TRUE)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 NonCichlids_plot
 
-#Analysis 7: The combined figure of both plots (export as 10 height x 10 width)
+#Analysis 7: The combined figure of both plots
 
 Combined_Figure_II <- ggarrange(Cichlids_plot,NonCichlids_plot, common.legend = FALSE, 
                               labels = c("A", "B"),
