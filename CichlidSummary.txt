@@ -1,7 +1,0 @@
-Lake	Cribroheros robertsoni	Cryptoheros chetumalensis	Mayaheros urophthalmus	Oreochromis spp.	Parachromis multifasciatus	Petenia splendida	Thorichthys meeki	Trichromis salvini	Vieja melanurus
-Noh Bec	0.13	0.13	0.5	0	0	0.19	6.56	0.31	0.81
-Petcacab	0	0.19	0	0.13	0	0.13	1.69	0.25	0.88
-Santa Teresita	0.19	0	0.19	0.06	0	0.06	3.31	0	0.06
-San Felipe	0	0	0.19	0.06	0	0.13	2.75	0.06	0.06
-Caobas	0.56	0	0.44	0	0.13	0.44	1.69	0	0.31
-Chacanbacan	0.06	0	0.13	0	0	0.25	1.44	0.06	1.38
