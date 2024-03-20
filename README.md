@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/539662226.svg)](https://zenodo.org/doi/10.5281/zenodo.10845971)
+
 # Mexico-fish-community
 
 Fish community ecology in Quintana Roo lakes paper
